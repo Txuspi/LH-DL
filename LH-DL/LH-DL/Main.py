@@ -8,30 +8,29 @@ if __name__ == '__main__':
     pass
 import _tkinter
 import tkinter
-  
+Course = ""
+def get_URLS(urls):
+       url = Course
+       print(EntryCourse.get()) 
+def press_button():
+    urls = []
+    get_URLS(urls)
     
 top = tkinter.Tk()
+top.title("Obtener cursos en pdf")
 LabelCourse = tkinter.Label(top, text="Course Name:")
-LabelCourse.pack( side = tkinter.LEFT)
-EntryCourse = tkinter.Entry(top, bd =5)
-EntryCourse.pack(side = tkinter.RIGHT)
+LabelCourse.grid(pady=5, row=0, column=0)
+EntryCourse = tkinter.Entry(top, width=40, text=Course)
+EntryCourse.grid(padx=5, row=0, column=1)
 LabelPageCount = tkinter.Label(top, text="Page Count:")
-LabelPageCount.pack( side = tkinter.LEFT)
-EntryPageCount = tkinter.Entry(top, bd =5)
-EntryPageCount.pack(side = tkinter.RIGHT)
+LabelPageCount.grid(pady=5, row=1, column=0)
+EntryPageCount = tkinter.Entry(top, width=40)
+EntryPageCount.grid(padx=5, row=1, column=1)
 
-class get_URLS():
-    url = EntryCourse.get()
-    print('%s:' % (url)) 
-class LH:
-    urls = []
-    get_URLS()
-ButtonGetUrls = tkinter.Button(top,  command = LH, bd =5)
-ButtonGetUrls.pack(side = tkinter.RIGHT)
+ButtonGetUrls = tkinter.Button(top, text="Extraer" ,width=50 ,command=press_button, bd =5)
+ButtonGetUrls.grid(padx=10, pady=10, row=2, column=0, columnspan=2)
 # Code to add widgets will go here...
 top.mainloop()
 
 
-
-#class getURLS:
     
